@@ -17,6 +17,7 @@ gem "bootstrap", "~> 4.4.1"
 gem "jquery-rails"
 gem "font-awesome-rails"
 gem "devise"
+gem "rails-i18n", "~> 5.1"
 
 gem "bootsnap", ">= 1.1.0", require: false
 
