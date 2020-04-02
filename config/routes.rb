@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  scope ":locale", locale: /en|vn/ do 
+  scope "(:locale)", locale: /en|vi/ do
     root "profiles#index"
   end
+  
+  devise_for :users
 end
