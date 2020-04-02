@@ -1,16 +1,15 @@
 <div class="container mt-3">
   <div class="profile-header">
     <!-- Avatar Profile -->
-    <div class="profile-img">
+    <div class="profile-image">
       <%= link_to image_tag("TongDangTinh.JPG"), "#", alt: "my profile" %>
     </div>
-    
+
     <!-- Information -->
     <div class="profile-nav-info">
       <h3 class="user-name">Tống Đăng Tình</h3>
-      <div class="address">
-        <p class="state">Ruby, </p>
-        <span class="country">Ruby on Rails developer.</span>
+      <div class="user-position">
+        <p class="state">Ruby, Ruby on Rails Developer</p>
       </div>
     </div>
   </div>
@@ -19,19 +18,19 @@
   <div class="main-bd">
     <div class="left-side">
       <div class="profile-side">
-        <p class="address-user">
+        <div class="user-address">
           <h5 class="text-info">Contact</h5>
           <hr>
           <i class="fa fa-map-marker"></i>
           Số 143, ngõ 68, Phú Diễn, Bắc Từ Liêm, Hà Nội
-        </p>
-        <p class="mobile-no">
-          <i class="fa fa-phone"></i> 0977 215 827
-        </p>
-        <p class="user-mail">
-          <i class="fa fa-envelope"></i>
-          <%= link_to "tinhtongdang@gmail.com" %>
-        </p>
+          <div class="mobile-number">
+            <i class="fa fa-phone"></i> 0977 215 827
+          </div>
+          <div class="user-email">
+            <i class="fa fa-envelope"></i>
+            <%= link_to "tinhtongdang@gmail.com" %>
+          </div>
+        </div>
       </div>
     </div>
 
