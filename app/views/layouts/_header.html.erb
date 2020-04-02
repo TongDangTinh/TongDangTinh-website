@@ -1,7 +1,7 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <%= link_to "Website", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    <button class="navbar-toggler" Khẩu="button" data-toggle="collapse" 
       data-target="#navbarSupportedContent" 
       aria-controls="navbarSupportedContent" aria-expanded="false" 
       aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
@@ -10,10 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <%=link_to "Home", root_path, class: "nav-link" %>
+          <%=link_to t(".home"), "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "About me", root_path, class: "nav-link" %>
+          <%= link_to t(".about_me"),root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Blog", "#", class: "nav-link" %>
@@ -22,16 +22,30 @@
           <ul class="navbar-nav mt-2">
             <% if user_signed_in? %>
               <li>
-                <%= link_to "Log out", destroy_user_session_path, 
-                  method: :delete %>
+                <div class="dropdown">
+                  <button class="btn btn-outline-secondary dropdown-toggle ml-3" 
+                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false">
+
+                    <%= current_user.name %>
+                  </button>
+                  <div class="dropdown-menu" 
+                    aria-labelledby="dropdownMenuButton">
+                    <%= link_to t(".change_password"), 
+                      edit_user_registration_path, class: "dropdown-item" %>
+                    <%= link_to t(".log_out"),destroy_user_session_path, 
+                      method: :delete, class: "dropdown-item" %>
+                  </div>
+                </div>
               </li>
             <% else %>
               <li>
-                <%= link_to "Sign Up", new_user_registration_path, 
+                <%= link_to t(".sign_in"), new_user_registration_path, 
                   class: "ml-3" %>
               </li>
               <li>
-                <%= link_to "Log In", new_user_session_path, class: "ml-3" %>
+                <%= link_to t(".log_in"), new_user_session_path, 
+                  class: "ml-3" %>
               </li>
             <% end %> 
           </ul>

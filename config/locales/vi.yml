@@ -1,0 +1,9 @@
+vi:
+  layouts:
+    header:
+      home: "Trang Chủ"
+      about_me : "Về Tôi"
+      log_out: "Đăng Xuất"
+      sign_in: "Đăng Ký"
+      log_in: "Đăng Nhập"
+      change_password: "Đổi Mật Khẩu"
